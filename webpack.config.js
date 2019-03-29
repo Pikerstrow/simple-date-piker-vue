@@ -10,18 +10,10 @@ module.exports = {
       { test: /\.js$/, use: 'babel-loader' },
       // use vue-loader for .vue files
       { test: /\.vue$/, use: 'vue-loader' }, 
-      // use css-loader for .css files
-      /*{ test: /\.css$/, use: 'css-loader' }, 
-      // use scss-loader for .css files
-      { test: /\.scss$/, use: 'sass-loader' } */
-
-          {      test: /\.(scss|sass)$/i,
-            include: [
-                path.resolve(__dirname, 'node_modules'),
-                path.resolve(__dirname, 'src/scss'),
-            ],
-            loaders: ["css-loader", "sass-loader"]}
-            
+      // use css-loader and sass-loaders for .scss files
+      { test: /\.(scss|sass)$/i,            
+        loaders: ["css-loader", "sass-loader"]
+      }            
     ]
   },
   // default for pretty much every project
