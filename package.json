@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-date-piker",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "Just a simple date picker component made on vue js",
   "main": "src/main.js",
   "scripts": {
@@ -17,8 +17,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "babel-loader": "^8.0.5",
-    "babel-preset-env": "^1.7.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "node-sass": "^4.11.0",

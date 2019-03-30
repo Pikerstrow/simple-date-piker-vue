@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {EventBusForDatePiker} from '../../event-bus.js';
+import {EventBusForDatePiker} from '../event-bus.js';
 
 export default {
   props: ["weeks", "month", "year", 'options'], 

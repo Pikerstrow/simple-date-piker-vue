@@ -1,2 +1,2 @@
-import Vue from 'Vue';
+import Vue from 'vue';
 export const EventBusForDatePiker = new Vue();
