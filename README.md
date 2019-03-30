@@ -6,7 +6,7 @@ Component support four languages (English, Deutsch, Українська, Рус
 </p>
 
 <h2>Screen Shots</h2>
-<img src="https://github.com/Pikerstrow/simple-date-piker-vue/blob/master/src/images/date-piker-screen-shot.png">
+<img src="src/images/date-piker-screen-shot.png">
 
 <h2>Demo</h2>
 <p>Live demo - <a href="http://date-piker-demo.web-ol-mi.pp.ua/">http://date-piker-demo.web-ol-mi.pp.ua/</a></p>
@@ -101,7 +101,7 @@ Component support four languages (English, Deutsch, Українська, Рус
 
 <h2>Usage</h2>
 <b>a) without options (default ones)</b>
-<p><img src="https://github.com/Pikerstrow/simple-date-piker-vue/blob/master/src/images/date-piker-no-options.png"></p>
+<p><img src="src/images/date-piker-no-options.png"></p>
 
 <b>a) with options</b>
-<p><img src="https://github.com/Pikerstrow/simple-date-piker-vue/blob/master/src/images/date-piker-options.png"></p>
+<p><img src="src/images/date-piker-options.png"></p>
