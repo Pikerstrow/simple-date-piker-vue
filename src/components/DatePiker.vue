@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import {EventBusForDatePiker} from './event-bus.js';
+import { EventBusForDatePiker } from "./event-bus.js";
 import Calendar from "./Calendar.vue";
 
 export default {
