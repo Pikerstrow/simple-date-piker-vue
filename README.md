@@ -6,7 +6,7 @@ Component support four languages (English, Deutsch, Українська, Рус
 </p>
 
 <h2>Screen Shots</h2>
-<img src="src/images/date-piker-screen-shot.png">
+<img src="https://user-images.githubusercontent.com/39648888/55281179-612b9c00-5339-11e9-9583-10e04e475f31.png">
 
 <h2>Demo</h2>
 <p>Live demo - <a href="http://date-piker-demo.web-ol-mi.pp.ua/">http://date-piker-demo.web-ol-mi.pp.ua/</a></p>
@@ -101,7 +101,7 @@ Component support four languages (English, Deutsch, Українська, Рус
 
 <h2>Usage</h2>
 <b>a) without options (default ones)</b>
-<p><img src="src/images/date-piker-no-options.png"></p>
+<p><img src="https://user-images.githubusercontent.com/39648888/55281177-612b9c00-5339-11e9-8a1e-99945c1fa459.png"></p>
 
 <b>a) with options</b>
-<p><img src="src/images/date-piker-options.png"></p>
+<p><img src="https://user-images.githubusercontent.com/39648888/55281178-612b9c00-5339-11e9-803f-af36937cfd10.png></p>
