@@ -122,7 +122,7 @@ export default {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
