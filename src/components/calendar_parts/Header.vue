@@ -2,9 +2,19 @@
   <div>
     <div class="header-elems-container">
       <div class="switchers-container">
-        <span class="month-switcher" @click="prevMonth()">&lt;</span>
+        <div class="month-switcher" @click="prevMonth()">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style='width: 25px; height: 25px;'>
+             <path stroke="black" stroke-width=".2" 
+              d="M70 0, l -50 50, 50 50, 10 0, -50 -50, 50 -50 z" />
+          </svg>
+        </div>
         <span class="calendar-date">{{ calendarDate }}</span>
-        <span class="month-switcher" @click="nextMonth()">&gt;</span>
+        <div class="month-switcher" @click="nextMonth()">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style='width: 25px; height: 25px;'>
+            <path stroke="black" stroke-width=".2" 
+              d="M30 0 l 50 50, -50 50, -10 0, 50 -50, -50 -50 z" />
+          </svg>
+        </div>
       </div>
       <div class="close-button-container">
         <button @click="hideCalendar()" class="hide-calendar">
@@ -56,6 +66,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 7px 5px;
 
     .switchers-container,
     .close-button-container {
@@ -103,8 +114,6 @@ export default {
         }
       }
     }
-
-    div,
     span {
       padding: 6px;
     }
@@ -112,7 +121,11 @@ export default {
       cursor: pointer;
       font-size: 25px;
       font-weight: bold;
-      padding-bottom: 10px;
+      padding: 7px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       &:hover {
         background-color: rgb(238, 235, 235);
       }
