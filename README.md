@@ -104,4 +104,4 @@ Component support four languages (English, Deutsch, Українська, Рус
 <p><img src="https://user-images.githubusercontent.com/39648888/55281177-612b9c00-5339-11e9-8a1e-99945c1fa459.png"></p>
 
 <b>a) with options</b>
-<p><img src="https://user-images.githubusercontent.com/39648888/55281178-612b9c00-5339-11e9-803f-af36937cfd10.png></p>
+<p><img src="https://user-images.githubusercontent.com/39648888/55281178-612b9c00-5339-11e9-803f-af36937cfd10.png"></p>
