@@ -117,9 +117,7 @@ Component support four languages (English, Deutsch, Українська, Рус
     }
 </pre>
 
-<pre>
-    '<date-piker v-model="date"></date-piker>'
-</pre>
+<p><img src="https://github.com/Pikerstrow/simple-date-piker-vue/blob/master/src/images/date-piker-no-options.png"></p>
 
 <b>a) with options</b>
 <pre>
@@ -143,6 +141,4 @@ Component support four languages (English, Deutsch, Українська, Рус
     }
 </pre>
 
-<pre>
-    '<date-piker v-model='date' :options="options"></date-piker>'
-</pre>
+<p><img src="https://github.com/Pikerstrow/simple-date-piker-vue/blob/master/src/images/date-piker-options.png"></p>
