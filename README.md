@@ -101,44 +101,7 @@ Component support four languages (English, Deutsch, Українська, Рус
 
 <h2>Usage</h2>
 <b>a) without options (default ones)</b>
-<pre>
-    import DatePiker from "simple-date-piker-vue";
-
-    export default {
-        name: "app",
-        data() {
-            return {
-                date: ""
-            };
-        },
-        components: {
-            "date-piker": DatePiker
-        }
-    }
-</pre>
-
 <p><img src="https://github.com/Pikerstrow/simple-date-piker-vue/blob/master/src/images/date-piker-no-options.png"></p>
 
 <b>a) with options</b>
-<pre>
-    import DatePiker from './components/DatePiker.vue'
-
-    export default {
-        name: 'app',
-        data() {
-            return {
-                date: '',
-                options: {
-                    useCurrentDate: true,
-                    locale: "Uk-ua",
-                    dateFormat: "dd-mm-YYYY"
-                }
-            }
-        },
-        components: {
-            'date-piker': DatePiker
-        }
-    }
-</pre>
-
 <p><img src="https://github.com/Pikerstrow/simple-date-piker-vue/blob/master/src/images/date-piker-options.png"></p>
