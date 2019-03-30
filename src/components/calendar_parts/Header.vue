@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import {EventBusForDatePiker} from '../../event-bus.js';
+
 export default {
   props: ["month", "year", "options"],
   computed: {
@@ -38,7 +40,7 @@ export default {
       this.$emit("nextMonth");
     },
     hideCalendar() {
-      busForDatePiker.$emit("hideCalendar");
+      EventBusForDatePiker.$emit("hideCalendar");
     }
   }
 };
@@ -76,6 +78,7 @@ export default {
         width: 26px;
         height: 26px;
         border: none;
+        cursor: pointer;
 
         span {
           display: block;

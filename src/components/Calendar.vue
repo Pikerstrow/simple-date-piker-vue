@@ -1,5 +1,5 @@
 <template>
-  <div class="calendar mt-2">    
+  <div class="calendar">    
     <calendar-header :month="month" 
                      :year="year" 
                      @prevMonth="prevMonth" 

@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import {EventBusForDatePiker} from '../../event-bus.js';
+
 export default {
   props: ["weeks", "month", "year", 'options'], 
   computed: {
@@ -95,7 +97,7 @@ export default {
           break;   
       }
 
-      busForDatePiker.$emit('dateWasSent', dateForReturn);
+      EventBusForDatePiker.$emit('dateWasSent', dateForReturn);
     }
   }
 };
@@ -106,6 +108,7 @@ export default {
     tr, td, th {
       border: none !important;
       padding: 0.35rem 0.75rem !important;
+      text-align: center;
     }
     td {      
       &:hover {
