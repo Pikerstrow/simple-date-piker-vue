@@ -41,7 +41,7 @@ export default {
   },  
   created(){
     let vm = this;
-    bus.$on('hideCalendar', () => {
+    busForDatePiker.$on('hideCalendar', () => {
       vm.showCalendar = false;
 
       if(!vm.dateToShowInInput){
@@ -50,7 +50,7 @@ export default {
       }
       
     });
-    bus.$on('dateWasSent', (date) => {      
+    busForDatePiker.$on('dateWasSent', (date) => {      
       vm.dateToShowInInput = date;
       vm.showCalendar = false;
       this.$emit('input', date)

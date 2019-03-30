@@ -1,14 +1,14 @@
 <template>
   <div>
-    <table class="table table-calendar">
+    <table class="table-calendar">
       <thead>
         <tr>
-          <th v-for="(weekDay, index) in weekDays" :key="index" class="text-center">{{ weekDay }}</th>         
+          <th v-for="(weekDay, index) in weekDays" :key="index">{{ weekDay }}</th>         
         </tr>
       </thead>
       <tbody>
         <tr v-for="(week, index) in weeks" :key="index">
-          <td v-for="(day, index) in week" :key="index" @click='sendDate(day)'>
+          <td v-for="(day, ind) in week" :key="ind" @click='sendDate(day)'>
             <span v-html="filterDays(day)"></span>
           </td>
         </tr>
@@ -95,7 +95,7 @@ export default {
           break;   
       }
 
-      bus.$emit('dateWasSent', dateForReturn);
+      busForDatePiker.$emit('dateWasSent', dateForReturn);
     }
   }
 };
