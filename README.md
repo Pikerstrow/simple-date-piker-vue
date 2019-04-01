@@ -42,7 +42,7 @@ Component support four languages (English, Deutsch, Українська, Рус
         </tr>
         <tr>
             <td>“RU-ru”</td>
-            <td>Російська</td>
+            <td>Русский</td>
         </tr>
     </tbody>
 </table>
@@ -100,8 +100,12 @@ Component support four languages (English, Deutsch, Українська, Рус
 <p>By default, component uses English language and “dd/mm/YYYY” date format.</p>
 
 <h2>Usage</h2>
-<b>a) without options (default ones)</b>
-<p><img src="https://user-images.githubusercontent.com/39648888/55281177-612b9c00-5339-11e9-8a1e-99945c1fa459.png"></p>
 
-<b>a) with options</b>
-<p><img src="https://user-images.githubusercontent.com/39648888/55281178-612b9c00-5339-11e9-803f-af36937cfd10.png"></p>
+<p>After installation, all you need is import DatePiker component, using the next syntax:</p>
+<pre>import DatePiker from "simple-date-piker-vue"</pre>
+
+<b>a) example without options (default ones)</b>
+<p><img src="https://user-images.githubusercontent.com/39648888/55304101-865ffd80-5452-11e9-94cd-9eda1ebc495c.png"></p>
+
+<b>a) example with options</b>
+<p><img src="https://user-images.githubusercontent.com/39648888/55304102-865ffd80-5452-11e9-8e73-2745f5627b1d.png"></p>
