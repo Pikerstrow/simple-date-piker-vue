@@ -60,7 +60,7 @@ Component support four languages (English, Deutsch, Українська, Рус
     </thead>
     <tbody>
         <tr>
-            <td rowspan="3">'dateFormat'</td>
+            <td rowspan="4">'dateFormat'</td>
             <td>“dd-mm-YYYY”</td>
         </tr>
         <tr>
