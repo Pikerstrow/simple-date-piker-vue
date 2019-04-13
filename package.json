@@ -1,6 +1,6 @@
 {
   "name": "simple-date-piker-vue",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Just a simple date picker component made on vue js",
   "main": "src/main.js",
   "scripts": {
