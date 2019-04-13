@@ -16,7 +16,7 @@ Component support four languages (English, Deutsch, Українська, Рус
 <p>Live demo - <a href="http://date-piker-demo.web-ol-mi.pp.ua/">http://date-piker-demo.web-ol-mi.pp.ua/</a></p>
 
 <h2>Installation</h2>
-<p><pre>$npm install simple-date-piker-vue –save</pre></p>
+<p><pre>$npm install simple-date-piker-vue --save</pre></p>
 
 <h2>Options and props</h2>
 <p>Options object (example below) has to be passed to the component in common way (using v-bind)</p>
