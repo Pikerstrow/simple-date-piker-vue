@@ -10,6 +10,9 @@ Component support four languages (English, Deutsch, Українська, Рус
 
 <h2>Screen Shots</h2>
 <img src="https://user-images.githubusercontent.com/39648888/56077520-d2615980-5de5-11e9-9f92-a45f84f9a89d.png">
+<p>
+<b>Note:</b> highlighted date on the screenshot is the current date.
+</p>
 
 <h2>Demo</h2>
 <p>Live demo - <a href="http://date-piker-demo.web-ol-mi.pp.ua/">http://date-piker-demo.web-ol-mi.pp.ua/</a></p>
