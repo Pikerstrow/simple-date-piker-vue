@@ -2,7 +2,6 @@
   <div style="position: relative" v-click-outside="hideCalendar">
     <input
       @focus="showCalendar = true"
-      @input="handleInput"
       v-model="dateToShowInInput"
       type="text"
       class="form-control"
