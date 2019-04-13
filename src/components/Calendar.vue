@@ -25,7 +25,12 @@ export default {
   data() {
     return {
       month: new Date().getMonth(),
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
+
+      /*Claim todaysMonth and todaysYear because month and year variables above changes during code execution*/
+      todaysDate: new Date().getDate(),
+      todaysMonth: new Date().getMonth(),
+      todaysYear: new Date().getFullYear()
     };
   },
   computed: {
@@ -98,10 +103,26 @@ export default {
           let dayOfWeek = new Date(this.year, this.month, i - delta).getDay();
 
           if (dayOfWeek === 0) {
-            weeks[weeksCounter].push(i - delta);
+            if (
+              this.month === this.todaysMonth &&
+              this.year === this.todaysYear &&
+              i - delta === this.todaysDate
+            ) {
+              weeks[weeksCounter].push(i - delta + " currDate");
+            } else {
+              weeks[weeksCounter].push(i - delta);
+            }
             weeksCounter++;
           } else {
-            weeks[weeksCounter].push(i - delta);
+            if (
+              this.month === this.todaysMonth &&
+              this.year === this.todaysYear &&
+              i - delta === this.todaysDate
+            ) {
+              weeks[weeksCounter].push(i - delta + " currDate");
+            } else {
+              weeks[weeksCounter].push(i - delta);
+            }
           }
         }
       }
@@ -133,9 +154,6 @@ export default {
           break;
       }
     }
-  },
-  mounted() {
-    this.buildCalendarBody();
   }
 };
 </script>

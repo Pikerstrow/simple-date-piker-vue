@@ -29,13 +29,7 @@
             ></path>
           </svg>
         </div>
-      </div>
-      <div class="close-button-container">
-        <button @click="hideCalendar()" class="hide-calendar">
-          <span class="one"></span>
-          <span class="two"></span>
-        </button>
-      </div>
+      </div>      
     </div>
   </div>
 </template>
@@ -82,51 +76,12 @@ export default {
   align-items: center;
   padding: 7px 5px;
 
-  .switchers-container,
-  .close-button-container {
+  .switchers-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 85%;
-  }
-
-  .close-button-container {
-    width: 15%;
-    justify-content: center;
-
-    button.hide-calendar {
-      line-height: 10px;
-      background-color: rgb(241, 91, 91);
-      border-radius: 50%;
-      position: relative;
-      width: 26px;
-      height: 26px;
-      border: none;
-      cursor: pointer;
-
-      span {
-        display: block;
-        width: 16px;
-        height: 3px;
-        background-color: rgb(255, 255, 255);
-        margin-bottom: 0px;
-        padding: 0 !important;
-        position: absolute;
-        top: calc(50% - 1px);
-        left: calc(50% - 8px);
-      }
-
-      .one {
-        transform: rotate(40deg);
-        transform-origin: center center;
-      }
-
-      .two {
-        transform: rotate(-40deg);
-        transform-origin: center center;
-      }
-    }
   }
   span {
     padding: 6px;

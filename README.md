@@ -1,12 +1,15 @@
 <h2>Description</h2>
 <p>
 This is very simple “Date Piker” component created on Vue, which has no other dependencies excepts of Vue :)
+</p>
+<p>
+Component support four languages (English, Deutsch, Українська, Русский) and four date formats (“dd-mm-YYYY”, "YYYY-mm-dd", “dd/mm/YYYY”, “mm/dd/YYYY”). Using Options object, we can also set current date as default value.
 <br/>
-Component support four languages (English, Deutsch, Українська, Русский) and three date formats (“dd-mm-YYYY”, “dd/mm/YYYY”, “mm/dd/YYYY”). Using Options object, we can also set current date as default value.
+<b>Note:</b> Despite of four different date formats which are supported by the component, for passing date to 'back-end' all date formats converts into ISO format ('YYYY-mm-dd'), which can be used in SQL queries without restrictions. 
 </p>
 
 <h2>Screen Shots</h2>
-<img src="https://user-images.githubusercontent.com/39648888/55281179-612b9c00-5339-11e9-9583-10e04e475f31.png">
+<img src="https://user-images.githubusercontent.com/39648888/56077520-d2615980-5de5-11e9-9f92-a45f84f9a89d.png">
 
 <h2>Demo</h2>
 <p>Live demo - <a href="http://date-piker-demo.web-ol-mi.pp.ua/">http://date-piker-demo.web-ol-mi.pp.ua/</a></p>
@@ -60,12 +63,15 @@ Component support four languages (English, Deutsch, Українська, Рус
             <td rowspan="3">'dateFormat'</td>
             <td>“dd-mm-YYYY”</td>
         </tr>
+        <tr>
+            <td>“YYYY-mm-dd”</td>
+        </tr>
         <tr>                        
             <td>“dd/mm/YYYY”</td>
         </tr>
         <tr>
             <td>“mm/dd/YYYY”</td>
-        </tr>
+        </tr>        
     </tbody>
 </table>
 
@@ -97,7 +103,7 @@ Component support four languages (English, Deutsch, Українська, Рус
     }
 </pre>
 
-<p>By default, component uses English language and “dd/mm/YYYY” date format.</p>
+<p>By default, component uses English language and “YYYY-mm-dd” date format.</p>
 
 <h2>Usage</h2>
 
@@ -109,3 +115,12 @@ Component support four languages (English, Deutsch, Українська, Рус
 
 <b>a) example with options</b>
 <p><img src="https://user-images.githubusercontent.com/39648888/55304102-865ffd80-5452-11e9-8e73-2745f5627b1d.png"></p>
+
+
+<h2>Validation UI</h2>
+<p>
+Another feature of Component is supporting of UI for the failed validation (with bootstrap 4 'invalid-feedback' and 'is-invalid' styles). All you need is to pass error property (with the error message) to the component (see below on the picture).
+</p>
+<p>
+<img src="https://user-images.githubusercontent.com/39648888/56077699-dd1cee00-5de7-11e9-8355-199a7fe16304.png">
+</p>

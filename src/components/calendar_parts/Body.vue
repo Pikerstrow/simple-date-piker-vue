@@ -52,7 +52,13 @@ export default {
     filterDays(value) {
       if (typeof value === "string") {
         let day = value.split(" ")[0];
-        return "<span class='not-current-month'>" + day + "</span>";
+        let remark = value.split(" ")[1];
+
+        if (remark == "currDate") {
+          return "<span class='current-day'>" + day + "</span>";
+        } else {
+          return "<span class='not-current-month'>" + day + "</span>";
+        }
       } else {
         return value;
       }
@@ -82,12 +88,17 @@ export default {
         day = "0" + day;
       }
 
-      let requestedFormat = this.options.dateFormat ? this.options.dateFormat : "dd/mm/YYYY";
+      let requestedFormat = this.options.dateFormat
+        ? this.options.dateFormat
+        : "YYYY-mm-dd";
       let dateForReturn;
 
       switch (requestedFormat) {
         case "dd-mm-YYYY":
           dateForReturn = day + "-" + month + "-" + this.year;
+          break;
+        case "YYYY-mm-dd":
+          dateForReturn = this.year + "-" + month + "-" + day;
           break;
         case "dd/mm/YYYY":
           dateForReturn = day + "/" + month + "/" + this.year;
@@ -124,6 +135,11 @@ export default {
 }
 .not-current-month {
   color: rgb(189, 187, 187);
+}
+.current-day {
+  background-color: rgb(238, 235, 235);
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 </style>
 

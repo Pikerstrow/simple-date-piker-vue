@@ -1,5 +1,5 @@
 <template>
-  <div style="position: relative">
+  <div style="position: relative" v-click-outside="hideCalendar">
     <input
       @focus="showCalendar = true"
       @input="handleInput"
@@ -22,13 +22,16 @@ export default {
     value: {
       default: ""
     },
+    error: {
+      default: ""
+    },
     options: {
       type: Object,
       default: function() {
         return {
           useCurrentDate: true,
           locale: "EN-en",
-          dateFormat: "dd/mm/YYYY"
+          dateFormat: "YYYY-mm-dd"
         };
       }
     }
@@ -40,27 +43,52 @@ export default {
     };
   },
   methods: {
-    handleInput(e) {
-      this.$emit("input", this.dateToShowInInput);
+    hideCalendar(event) {
+      this.showCalendar = false;
     }
   },
   components: {
     calendar: Calendar
   },
+  directives: {
+    "click-outside": {
+      bind: function(el, binding, vnode) {
+        window.event = function(event) {
+          if (!(el == event.target || el.contains(event.target))) {
+            vnode.context[binding.expression](event);
+          }
+        };
+        document.body.addEventListener("click", window.event);
+      },
+      unbind: function(el) {
+        document.body.removeEventListener("click", window.event);
+      }
+    }
+  },
   created() {
     let vm = this;
-    EventBusForDatePiker.$on("hideCalendar", () => {
-      vm.showCalendar = false;
-
-      if (!vm.dateToShowInInput) {
-        vm.dateToShowInInput = "";
-        this.$emit("input", vm.dateToShowInInput);
-      }
-    });
+   
     EventBusForDatePiker.$on("dateWasSent", date => {
       vm.dateToShowInInput = date;
       vm.showCalendar = false;
-      this.$emit("input", date);
+
+      let dateToStore;
+      let dateParts;
+
+      if(this.options.dateFormat == "dd/mm/YYYY"){
+          dateParts = date.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+          dateToStore = dateParts[3] + "-" + dateParts[2] + "-" + dateParts[1];
+      } else if(this.options.dateFormat == "mm/dd/YYYY"){
+          dateParts = date.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+          dateToStore = dateParts[3] + "-" + dateParts[1] + "-" + dateParts[2];
+      } else if(this.options.dateFormat == "mm-dd-YYYY") {
+          dateParts = date.match(/^(\d{2})\-(\d{2})\-(\d{4})$/);
+          dateToStore = dateParts[3] + "-" + dateParts[2] + "-" + dateParts[1];
+      } else {
+          dateToStore = date;
+      }
+
+      this.$emit("input", dateToStore);
     });
 
     /*Set current date if appropriate iption is set*/
@@ -81,23 +109,29 @@ export default {
 
       let requestedFormat = this.options.dateFormat
         ? this.options.dateFormat
-        : "dd-mm-YYYY";
-      let dateForReturn;
+        : "YYYY-mm-dd";
+
+      let dateToShow;
+
+      let dateForReturn = todaysYear + "-" + todaysMonth + "-" + todaysDay;
 
       switch (requestedFormat) {
         case "dd-mm-YYYY":
-          dateForReturn = todaysDay + "-" + todaysMonth + "-" + todaysYear;
+          dateToShow = todaysDay + "-" + todaysMonth + "-" + todaysYear;
+          break;
+        case "YYYY-mm-dd":
+          dateToShow = dateForReturn;
           break;
         case "dd/mm/YYYY":
-          dateForReturn = todaysDay + "/" + todaysMonth + "/" + todaysYear;
+          dateToShow = todaysDay + "/" + todaysMonth + "/" + todaysYear;
           break;
         case "mm/dd/YYYY":
-          dateForReturn = todaysMonth + "/" + todaysDay + "/" + todaysYear;
+          dateToShow = todaysMonth + "/" + todaysDay + "/" + todaysYear;
           break;
       }
 
-      vm.dateToShowInInput = dateForReturn;
-      this.$emit("input", vm.dateToShowInInput);
+      vm.dateToShowInInput = dateToShow;
+      this.$emit("input", dateForReturn);
     }
   }
 };
@@ -123,6 +157,24 @@ export default {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin-bottom: 13px;
+}
+
+.form-control:invalid, .form-control.is-invalid {
+  border-color: #e3342f;
+  padding-right: calc(1.6em + 0.75rem);
+  border-color: #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.invalid-feedback {
+  width: 100%;
+  margin-top: -6px;
+  font-size: 80%;
+  color: #dc3545;
+  text-align: left;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
