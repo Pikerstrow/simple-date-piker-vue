@@ -4,8 +4,9 @@ This is very simple “Date Piker” component created on Vue, which has no othe
 </p>
 <p>
 Component support four languages (English, Deutsch, Українська, Русский) and four date formats (“dd-mm-YYYY”, "YYYY-mm-dd", “dd/mm/YYYY”, “mm/dd/YYYY”). Using Options object, we can also set current date as default value.
-<br/>
-<b>Note:</b> Despite of four different date formats which are supported by the component, for passing date to 'back-end' all date formats converts into ISO format ('YYYY-mm-dd'), which can be used in SQL queries without restrictions. 
+</p>
+<p>
+<b>Note:</b> Despite of four different date formats which are supported by the component, for passing date to 'back-end' all date formats converts into ISO format ('YYYY-mm-dd'), which can be used in SQL queries without restrictions. Different date formats are used for UI only.
 </p>
 
 <h2>Screen Shots</h2>
