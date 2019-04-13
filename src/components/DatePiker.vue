@@ -6,9 +6,11 @@
       v-model="dateToShowInInput"
       type="text"
       class="form-control"
+      :class="{'is-invalid': this.error}"
       id="inputForDatePiker"
     >
     <calendar class="calendar-component" v-if="showCalendar" :options="options"></calendar>
+    <div v-if="error" class="invalid-feedback">{{ error }}</div>
   </div>
 </template>
 
