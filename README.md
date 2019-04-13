@@ -10,7 +10,7 @@ Component support four languages (English, Deutsch, Українська, Рус
 </p>
 
 <h2>Screen Shots</h2>
-<img src="https://user-images.githubusercontent.com/39648888/56077520-d2615980-5de5-11e9-9f92-a45f84f9a89d.png">
+<img src="https://user-images.githubusercontent.com/39648888/56078426-967fc180-5df0-11e9-8b0b-2dea2c499b2d.png">
 
 <h2>Demo</h2>
 <p>Live demo - <a href="http://date-piker-demo.web-ol-mi.pp.ua/">http://date-piker-demo.web-ol-mi.pp.ua/</a></p>
