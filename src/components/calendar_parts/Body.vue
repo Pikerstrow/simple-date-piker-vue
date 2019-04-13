@@ -52,13 +52,7 @@ export default {
     filterDays(value) {
       if (typeof value === "string") {
         let day = value.split(" ")[0];
-        let remark = value.split(" ")[1];
-
-        if (remark == "currDate") {
-          return "<span class='current-day'>" + day + "</span>";
-        } else {
-          return "<span class='not-current-month'>" + day + "</span>";
-        }
+        return "<span class='not-current-month'>" + day + "</span>";
       } else {
         return value;
       }
@@ -135,11 +129,6 @@ export default {
 }
 .not-current-month {
   color: rgb(189, 187, 187);
-}
-.current-day {
-  background-color: rgb(238, 235, 235);
-  padding: 2px 4px;
-  border-radius: 4px;
 }
 </style>
 
