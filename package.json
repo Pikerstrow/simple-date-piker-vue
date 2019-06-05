@@ -1,6 +1,6 @@
 {
   "name": "simple-date-piker-vue",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Just a simple date picker component made on vue js",
   "main": "src/main.js",
   "scripts": {
@@ -8,7 +8,10 @@
     "build": "webpack -p"
   },
   "keywords": [
-    "vue-js-date-piker", "date piker vue", "vue date piker", "datepiker vue"
+    "vue-js-date-piker",
+    "date piker vue",
+    "vue date piker",
+    "datepiker vue"
   ],
   "author": "Oleksandr Mishchuk",
   "license": "MIT",
@@ -27,6 +30,8 @@
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "tar": ">=2.2.2",
+    "fstream": ">=1.0.12"
   }
 }

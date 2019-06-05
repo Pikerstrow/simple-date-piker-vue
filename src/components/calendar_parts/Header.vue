@@ -11,7 +11,7 @@
             <path
               stroke="black"
               stroke-width=".2"
-              d="M70 0, l -50 50, 50 50, 10 0, -50 -50, 50 -50 z"
+              d="M70 0 l -50 50 50 50 10 0 -50 -50 50 -50 z"
             ></path>
           </svg>
         </div>
@@ -25,7 +25,7 @@
             <path
               stroke="black"
               stroke-width=".2"
-              d="M30 0 l 50 50, -50 50, -10 0, 50 -50, -50 -50 z"
+              d="M30 0 l 50 50 -50 50 -10 0 50 -50 -50 -50 z"
             ></path>
           </svg>
         </div>
